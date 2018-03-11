@@ -1,0 +1,16 @@
+language: android
+jdk: oraclejdk8
+
+android:
+  components:
+  - tools
+  - platform-tools
+  - build-tools-26.0.2
+  - android-26
+  - extra-android-m2repository
+
+script:
+  - ./gradlew build test jacocoTestReport jacocoTestReportDebug
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
