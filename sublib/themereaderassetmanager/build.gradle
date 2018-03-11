@@ -89,7 +89,7 @@ dependencies {
     testCompile ("com.nhaarman:mockito-kotlin:$mockito_kotlin_version") {
         exclude group: "org.jetbrains.kotlin"
     }
-    compile project(path: ':sublib:models')
+    compile project(path: ':models')
 }
 repositories {
     mavenCentral()

@@ -1,5 +1,9 @@
 package com.jereksel.libresubstratumlib
 
+import com.jereksel.libresubstratumlib.colorreader.Color
+import com.jereksel.libresubstratumlib.compilercommon.AndroidManifestGenerator
+import com.jereksel.libresubstratumlib.compilercommon.InvalidInvocationException
+import com.jereksel.libresubstratumlib.compilercommon.ThemeToCompile
 import org.slf4j.LoggerFactory
 import java.io.File
 import java.util.regex.Pattern
@@ -90,8 +94,8 @@ class AAPT(val aaptPath: String, testing: Boolean = false) {
             command.addAll(listOf("-I", it))
         }
 
-        if (themeDate.type3 != null && !themeDate.type3.default) {
-            val file = File(finalOverlayDir, "type3_${themeDate.type3.name}", "res")
+        if (themeDate.type3 != null && !themeDate.type3!!.default) {
+            val file = File(finalOverlayDir, "type3_${themeDate.type3!!.name}", "res")
             if (file.exists()) {
                 command.addAll(listOf("-S", file.absolutePath))
             } else {
@@ -99,8 +103,8 @@ class AAPT(val aaptPath: String, testing: Boolean = false) {
             }
         }
 
-        if (themeDate.type2 != null && !themeDate.type2.default) {
-            val file = File(finalOverlayDir, "type2_${themeDate.type2.name}", "res")
+        if (themeDate.type2 != null && !themeDate.type2!!.default) {
+            val file = File(finalOverlayDir, "type2_${themeDate.type2!!.name}", "res")
             if (file.exists()) {
                 command.addAll(listOf("-S", file.absolutePath))
             } else {

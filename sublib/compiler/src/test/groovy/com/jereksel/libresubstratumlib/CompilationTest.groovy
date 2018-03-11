@@ -1,5 +1,8 @@
 package com.jereksel.libresubstratumlib
 
+import com.jereksel.libresubstratumlib.colorreader.Color
+import com.jereksel.libresubstratumlib.compilercommon.ThemeToCompile
+import com.jereksel.libresubstratumlib.compilercommon.Type1DataToCompile
 import spock.lang.Ignore
 import spock.lang.Shared
 import spock.lang.Specification

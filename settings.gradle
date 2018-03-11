@@ -1,2 +1,10 @@
 rootProject.name = 'subslibs'
 
+import java.io.File
+
+def projects = new File("sublib").listFiles({it.directory} as FileFilter)
+
+projects.each { projectDir ->
+    include(":${projectDir.name}")
+    project(":${projectDir.name}").projectDir = file(projectDir)
+}

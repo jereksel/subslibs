@@ -91,11 +91,11 @@ dependencies {
     testCompile ("com.nhaarman:mockito-kotlin:$mockito_kotlin_version") {
         exclude group: "org.jetbrains.kotlin"
     }
-    implementation project(path: ':sublib:models')
-    implementation project(path: ':sublib:compilercommon')
+    implementation project(':models')
+    implementation project(':compilercommon')
 
-    testImplementation project(":sublib:colorreader")
-//    implementation project(path: ':sublib:compiler')
+    testImplementation project(":colorreader")
+//    implementation project(path: ':compiler')
 }
 repositories {
     mavenCentral()

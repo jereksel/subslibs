@@ -5,7 +5,7 @@ apply plugin: "jacoco"
 
 dependencies {
     implementation kotlinLib
-    implementation project(":sublib:models")
+    implementation project(":models")
     implementation slf4japi
 
     testCompile(
