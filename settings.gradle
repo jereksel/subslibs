@@ -1,6 +1,6 @@
 rootProject.name = 'subslibs'
 
-def projects = new File("sublib").listFiles({it.directory} as FileFilter)
+def projects = new File("subslibs").listFiles({it.directory} as FileFilter)
 
 projects.each { projectDir ->
     include(":${projectDir.name}")
