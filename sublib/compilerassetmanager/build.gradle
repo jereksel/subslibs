@@ -95,7 +95,6 @@ dependencies {
     implementation project(':compilercommon')
 
     testImplementation project(":colorreader")
-//    implementation project(path: ':compiler')
 }
 repositories {
     mavenCentral()

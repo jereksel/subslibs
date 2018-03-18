@@ -69,9 +69,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-//        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
-//        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.5.0'
-//        classpath ('net.saliman:gradle-cobertura-plugin:2.4.0');
         classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
         classpath 'com.github.triplet.gradle:play-publisher:1.2.0'
         classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.7.3'
@@ -170,6 +167,7 @@ subprojects { project ->
             version {
                 name = VERSION_NAME
                 released = new Date()
+                vcsTag = "v${VERSION_NAME}"
             }
         }
         publications = ['MyPublication']

@@ -77,6 +77,7 @@ project.afterEvaluate {
 dependencies {
     compile kotlinLib
     compile rxjava
+    compile project(':models')
 
     testCompile robolectric
     testCompile mockito
@@ -89,7 +90,6 @@ dependencies {
     testCompile ("com.nhaarman:mockito-kotlin:$mockito_kotlin_version") {
         exclude group: "org.jetbrains.kotlin"
     }
-    compile project(path: ':models')
 }
 repositories {
     mavenCentral()
