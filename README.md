@@ -5,3 +5,10 @@
 SubsLibs is project with multiple libraries for creating application that use [Substratum](https://github.com/substratum)
 
 ## Libraries
+
+- compiler
+- compilerassetmanager
+- compilercommon
+- models
+- reader
+- readerassetmanager

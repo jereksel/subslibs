@@ -64,8 +64,10 @@ class AAPT(val aaptPath: String, testing: Boolean = false) {
             command.addAll(listOf("-I", it))
         }
 
-        if (themeDate.type3 != null && !themeDate.type3!!.default) {
-            val file = File(finalOverlayDir, "type3_${themeDate.type3!!.name}", "res")
+        val type3 = themeDate.type3
+
+        if (type3 != null && !type3.default) {
+            val file = File(finalOverlayDir, "type3_${type3.name}", "res")
             if (file.exists()) {
                 command.addAll(listOf("-S", file.absolutePath))
             } else {
@@ -73,8 +75,10 @@ class AAPT(val aaptPath: String, testing: Boolean = false) {
             }
         }
 
-        if (themeDate.type2 != null && !themeDate.type2!!.default) {
-            val file = File(finalOverlayDir, "type2_${themeDate.type2!!.name}", "res")
+        val type2 = themeDate.type2
+
+        if (type2 != null && !type2.default) {
+            val file = File(finalOverlayDir, "type2_${type2.name}", "res")
             if (file.exists()) {
                 command.addAll(listOf("-S", file.absolutePath))
             } else {
